@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmokeSlate</title>
+    <meta
+      name="description"
+      content="SmokeSlate builds websites, apps, shortcuts, Discord bots, and more."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['\"Plus Jakarta Sans\"', 'ui-sans-serif', 'system-ui'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <a class="text-2xl font-semibold text-slate-900" href="index.html">SmokeSlate</a>
+        <nav class="flex flex-wrap items-center gap-6 text-sm font-medium text-slate-600" data-nav>
+          <a class="transition hover:text-indigo-500" href="index.html">Home</a>
+          <a class="transition hover:text-indigo-500" href="projects.html">Projects</a>
+          <a class="transition hover:text-indigo-500" href="hosting.html">Hosting</a>
+          <a class="transition hover:text-indigo-500" href="about.html">About Me</a>
+          <a class="transition hover:text-indigo-500" href="github.html">GitHub</a>
+          <a class="transition hover:text-indigo-500" href="discord.html">Discord</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden bg-slate-950 text-white">
+        <div class="absolute inset-y-0 right-0 hidden w-1/2 bg-gradient-to-l from-indigo-500/30 to-transparent lg:block"></div>
+        <div class="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20 sm:py-24 lg:flex-row lg:items-center lg:py-32">
+          <div class="max-w-2xl space-y-6">
+            <p class="text-sm font-semibold uppercase tracking-widest text-indigo-400">Creative developer</p>
+            <h1 class="font-display text-4xl font-bold leading-tight sm:text-5xl">
+              I'm SmokeSlate, I make websites, apps, shortcuts, Discord bots, run servers and more!
+            </h1>
+            <p class="text-lg text-slate-200">
+              I love experimenting with new ideas—whether that's spinning up a new web app, fine-tuning iOS shortcuts, or building
+              tools that help communities stay connected.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                class="inline-flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-400"
+                href="projects.html"
+              >
+                Explore projects
+              </a>
+              <a
+                class="inline-flex items-center justify-center rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
+                href="about.html"
+              >
+                More about me
+              </a>
+            </div>
+          </div>
+          <div class="relative ml-auto hidden w-full max-w-sm lg:block">
+            <div class="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-indigo-500/30 to-sky-400/20 blur-2xl"></div>
+            <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-8 shadow-xl backdrop-blur">
+              <p class="text-sm uppercase tracking-[0.35em] text-indigo-200">Latest update</p>
+              <p class="mt-4 text-3xl font-semibold text-white">ReSite</p>
+              <p class="mt-2 text-sm text-slate-200">My latest project, a service for making sites.</p>
+              <p class="mt-6 text-xs uppercase tracking-[0.3em] text-indigo-200">2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-20">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-widest text-indigo-500">Projects</p>
+            <h2 class="mt-2 text-3xl font-bold text-slate-900">Highlights from the lab</h2>
+            <p class="mt-4 max-w-2xl text-base text-slate-600">
+              A snapshot of recent experiments and tools. Dive into the full list for more apps, bots, and utilities.
+            </p>
+          </div>
+          <a class="text-sm font-semibold text-indigo-600 hover:text-indigo-500" href="projects.html">View all projects →</a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-projects data-projects-limit="3">
+          <p class="text-slate-500">Loading projects…</p>
+        </div>
+      </section>
+
+      <section class="border-y border-slate-200 bg-white/70">
+        <div class="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2">
+          <div class="space-y-4">
+            <p class="text-sm font-semibold uppercase tracking-widest text-indigo-500">Hosting</p>
+            <h2 class="text-3xl font-bold text-slate-900">How I keep my projects online</h2>
+            <p class="text-base text-slate-600">
+              From personal servers to cloud deployments, I mix and match the right tools for each idea. Reliability and quick
+              iteration are always top of mind.
+            </p>
+            <a class="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500" href="hosting.html">
+              Learn more
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="space-y-4">
+            <p class="text-sm font-semibold uppercase tracking-widest text-indigo-500">Social Links</p>
+            <h2 class="text-3xl font-bold text-slate-900">Connect with SmokeSlate</h2>
+            <p class="text-base text-slate-600">
+              Follow along for updates, new releases, and behind-the-scenes progress.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <a class="group flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-indigo-200 hover:shadow-lg" href="github.html">
+                <span class="text-sm font-semibold uppercase tracking-widest text-indigo-500">GitHub</span>
+                <span class="text-lg font-semibold text-slate-900">@SmokeSlate</span>
+                <span class="text-sm text-slate-500">Browse source code, experiments, and tools.</span>
+                <span class="mt-4 text-sm font-semibold text-indigo-600 group-hover:text-indigo-500">Visit profile →</span>
+              </a>
+              <a class="group flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-indigo-200 hover:shadow-lg" href="discord.html">
+                <span class="text-sm font-semibold uppercase tracking-widest text-indigo-500">Discord</span>
+                <span class="text-lg font-semibold text-slate-900">SmokeSlate Community</span>
+                <span class="text-sm text-slate-500">Join conversations about shortcuts, servers, and more.</span>
+                <span class="mt-4 text-sm font-semibold text-indigo-600 group-hover:text-indigo-500">Join the server →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 py-10 text-center text-sm text-slate-300">
+      <p>SmokeSlate</p>
+      <p class="mt-2">®2022-2025 All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
