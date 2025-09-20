@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmokeSlate — Discord</title>
+    <meta name="description" content="Join SmokeSlate on Discord." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Work Sans"', 'ui-sans-serif', 'system-ui'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white font-sans text-gray-900">
+    <header class="border-b bg-white">
+      <div
+        class="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <a class="text-2xl font-semibold text-gray-900" href="index.html">SmokeSlate</a>
+        <nav class="flex gap-6 text-sm font-medium text-gray-600" data-nav>
+          <a class="text-gray-600 hover:text-blue-600" href="index.html">Home</a>
+          <a class="text-gray-600 hover:text-blue-600" href="projects.html">Projects</a>
+          <a class="text-gray-600 hover:text-blue-600" href="about.html">About Me</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="py-16">
+      <div class="mx-auto max-w-3xl px-4 text-center">
+        <h1 class="text-4xl font-semibold text-gray-900 sm:text-5xl">Discord</h1>
+        <div class="mt-8 space-y-4 text-base leading-relaxed text-gray-700">
+          <p>The community server is still getting ready.</p>
+          <p>Check back soon for shortcuts talk, beta testing, and project updates!</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="border-t bg-gray-50">
+      <div class="mx-auto max-w-5xl px-4 py-8 text-center text-sm text-gray-600">
+        <p class="font-semibold text-gray-700">SmokeSlate</p>
+        <p class="mt-1">®2022-2025 All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
