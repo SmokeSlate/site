@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmokeSlate — Hosting</title>
+    <meta name="description" content="How SmokeSlate hosts projects and experiments." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-title" href="index.html">SmokeSlate</a>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About Me</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container hero">
+        <h1>Hosting</h1>
+        <div class="content-stack">
+          <p>
+            Hello, I'm SmokeSlate, I use XAMPP for PHP, Google Scripts, and Firebase Hosting for static sites.
+          </p>
+          <p>
+            I host my PHP applications using XAMPP. XAMPP provides an Apache server and MySQL database out of the box, which makes it easy to
+            spin up a working PHP environment without extensive configuration (unless I use it lol).
+          </p>
+          <p>
+            I deploy static and frontend web assets via Firebase Hosting. Firebase makes it easy to push updates with a single CLI command and
+            offers fast, secure hosting with built-in HTTPS and custom domain support.
+          </p>
+          <p>
+            While PHP isn’t natively supported by Firebase Hosting, I often separate the frontend to host on Firebase and use JS to connect to my
+            backend when needed. When I'm developing a simple backend with little to no user data storage, I use Google Apps Script. It has easy Google
+            API integration with a high quota and straightforward collaboration.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      SmokeSlate
+      <span>®2022-2025 All Rights Reserved</span>
+    </footer>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
