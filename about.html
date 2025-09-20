@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmokeSlate — About Me</title>
+    <meta name="description" content="Learn more about SmokeSlate, a developer, gamer, and beta tester." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Work Sans"', 'ui-sans-serif', 'system-ui'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black font-sans text-gray-100">
+    <header class="border-b border-gray-800 bg-black">
+      <div
+        class="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <a class="text-2xl font-semibold text-white" href="index.html">SmokeSlate</a>
+        <nav class="flex gap-6 text-sm font-medium text-gray-400" data-nav>
+          <a class="text-gray-400 transition hover:text-white" href="index.html">Home</a>
+          <a class="text-gray-400 transition hover:text-white" href="projects.html">Projects</a>
+          <a class="text-gray-400 transition hover:text-white" href="about.html">About Me</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="py-16">
+      <div class="mx-auto max-w-3xl px-4 text-center">
+        <h1 class="text-4xl font-semibold text-white sm:text-5xl">About Me</h1>
+        <div class="mt-8 space-y-4 text-base leading-relaxed text-gray-400">
+          <p>I am a developer, gamer, and beta tester.</p>
+          <p>I like playing VR games, as well as making my own shortcuts and websites.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>

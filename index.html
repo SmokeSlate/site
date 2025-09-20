@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmokeSlate</title>
+    <meta
+      name="description"
+      content="SmokeSlate builds websites, apps, shortcuts, Discord bots, and more."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Work Sans"', 'ui-sans-serif', 'system-ui'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black font-sans text-gray-100">
+    <header class="border-b border-gray-800 bg-black">
+      <div
+        class="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-6 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <a class="text-2xl font-semibold text-white" href="index.html">SmokeSlate</a>
+        <nav class="flex gap-6 text-sm font-medium text-gray-400" data-nav>
+          <a class="text-gray-400 transition hover:text-white" href="index.html">Home</a>
+          <a class="text-gray-400 transition hover:text-white" href="projects.html">Projects</a>
+          <a class="text-gray-400 transition hover:text-white" href="about.html">About Me</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="border-b border-gray-800">
+        <div class="mx-auto max-w-5xl px-4 py-20 text-center">
+          <h1 class="text-4xl font-semibold text-white sm:text-5xl">I'm SmokeSlate,</h1>
+          <p class="mt-4 text-lg text-gray-400">
+            I make websites, apps, shortcuts, Discord bots, run servers and more!
+          </p>
+        </div>
+      </section>
+
+      <section class="border-b border-gray-800 py-16">
+        <div class="mx-auto max-w-5xl px-4">
+          <div class="flex items-center justify-between gap-4">
+            <h2 class="text-2xl font-semibold text-white">Projects</h2>
+            <a class="text-sm font-medium text-gray-400 transition hover:text-white" href="projects.html"
+              >See all</a
+            >
+          </div>
+          <div
+            class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            data-projects
+            data-projects-featured="true"
+            data-projects-limit="6"
+          >
+            <p class="col-span-full text-center text-sm text-gray-500">Loading projects…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
