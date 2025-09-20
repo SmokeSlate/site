@@ -3,55 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SmokeSlate - GitHub</title>
-    <meta name="description" content="GitHub presence for SmokeSlate." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ['\"Plus Jakarta Sans\"', 'ui-sans-serif', 'system-ui'],
-            },
-          },
-        },
-      };
-    </script>
+    <title>SmokeSlate — GitHub</title>
+    <meta name="description" content="Follow SmokeSlate projects on GitHub." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
-  <body class="min-h-screen bg-slate-50 text-slate-900">
-    <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
-      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-        <a class="text-2xl font-semibold text-slate-900" href="index.html">SmokeSlate</a>
-        <nav class="flex flex-wrap items-center gap-6 text-sm font-medium text-slate-600" data-nav>
-          <a class="transition hover:text-indigo-500" href="index.html">Home</a>
-          <a class="transition hover:text-indigo-500" href="projects.html">Projects</a>
-          <a class="transition hover:text-indigo-500" href="hosting.html">Hosting</a>
-          <a class="transition hover:text-indigo-500" href="about.html">About Me</a>
-          <a class="transition hover:text-indigo-500" href="github.html">GitHub</a>
-          <a class="transition hover:text-indigo-500" href="discord.html">Discord</a>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-title" href="index.html">SmokeSlate</a>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About Me</a>
         </nav>
       </div>
     </header>
 
-    <main class="flex flex-1 items-center justify-center px-6 py-24">
-      <div class="max-w-xl text-center">
-        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-500">404</p>
-        <h1 class="mt-4 text-4xl font-bold text-slate-900 sm:text-5xl">The page you have entered does not exist</h1>
-        <p class="mt-6 text-base text-slate-600">
-          GitHub details aren't available yet. Explore current work from the projects page in the meantime.
-        </p>
-        <a
-          class="mt-8 inline-flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-400"
-          href="projects.html"
-        >
-          Browse projects
-        </a>
+    <main>
+      <div class="container hero">
+        <h1>GitHub</h1>
+        <div class="content-stack">
+          <p>You can find my public repos and experiments over on GitHub.</p>
+          <a class="project-card" href="https://github.com/SmokeSlate" target="_blank" rel="noopener noreferrer">
+            <span class="project-title">@SmokeSlate</span>
+            <span class="project-desc">Browse shortcuts, web utilities, and ongoing projects.</span>
+          </a>
+        </div>
       </div>
     </main>
 
-    <footer class="bg-slate-900 py-10 text-center text-sm text-slate-300">
-      <p>SmokeSlate</p>
-      <p class="mt-2">®2022-2025 All Rights Reserved</p>
+    <footer class="page-footer">
+      SmokeSlate
+      <span>®2022-2025 All Rights Reserved</span>
     </footer>
 
     <script src="assets/js/site.js" defer></script>

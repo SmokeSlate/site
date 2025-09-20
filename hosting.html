@@ -3,55 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SmokeSlate - Hosting</title>
-    <meta name="description" content="Hosting information for SmokeSlate projects." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ['\"Plus Jakarta Sans\"', 'ui-sans-serif', 'system-ui'],
-            },
-          },
-        },
-      };
-    </script>
+    <title>SmokeSlate — Hosting</title>
+    <meta name="description" content="How SmokeSlate hosts projects and experiments." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
-  <body class="min-h-screen bg-slate-50 text-slate-900">
-    <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
-      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-        <a class="text-2xl font-semibold text-slate-900" href="index.html">SmokeSlate</a>
-        <nav class="flex flex-wrap items-center gap-6 text-sm font-medium text-slate-600" data-nav>
-          <a class="transition hover:text-indigo-500" href="index.html">Home</a>
-          <a class="transition hover:text-indigo-500" href="projects.html">Projects</a>
-          <a class="transition hover:text-indigo-500" href="hosting.html">Hosting</a>
-          <a class="transition hover:text-indigo-500" href="about.html">About Me</a>
-          <a class="transition hover:text-indigo-500" href="github.html">GitHub</a>
-          <a class="transition hover:text-indigo-500" href="discord.html">Discord</a>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-title" href="index.html">SmokeSlate</a>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About Me</a>
         </nav>
       </div>
     </header>
 
-    <main class="flex flex-1 items-center justify-center px-6 py-24">
-      <div class="max-w-xl text-center">
-        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-500">404</p>
-        <h1 class="mt-4 text-4xl font-bold text-slate-900 sm:text-5xl">The page you have entered does not exist</h1>
-        <p class="mt-6 text-base text-slate-600">
-          This section hasn't been published yet. Head back to the homepage to explore featured projects and updates.
-        </p>
-        <a
-          class="mt-8 inline-flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-400"
-          href="index.html"
-        >
-          Go to site home
-        </a>
+    <main>
+      <div class="container hero">
+        <h1>Hosting</h1>
+        <div class="content-stack">
+          <p>
+            Hello, I'm SmokeSlate, I use XAMPP for PHP, Google Scripts, and Firebase Hosting for static sites.
+          </p>
+          <p>
+            I host my PHP applications using XAMPP. XAMPP provides an Apache server and MySQL database out of the box, which makes it easy to
+            spin up a working PHP environment without extensive configuration (unless I use it lol).
+          </p>
+          <p>
+            I deploy static and frontend web assets via Firebase Hosting. Firebase makes it easy to push updates with a single CLI command and
+            offers fast, secure hosting with built-in HTTPS and custom domain support.
+          </p>
+          <p>
+            While PHP isn’t natively supported by Firebase Hosting, I often separate the frontend to host on Firebase and use JS to connect to my
+            backend when needed. When I'm developing a simple backend with little to no user data storage, I use Google Apps Script. It has easy Google
+            API integration with a high quota and straightforward collaboration.
+          </p>
+        </div>
       </div>
     </main>
 
-    <footer class="bg-slate-900 py-10 text-center text-sm text-slate-300">
-      <p>SmokeSlate</p>
-      <p class="mt-2">®2022-2025 All Rights Reserved</p>
+    <footer class="page-footer">
+      SmokeSlate
+      <span>®2022-2025 All Rights Reserved</span>
     </footer>
 
     <script src="assets/js/site.js" defer></script>

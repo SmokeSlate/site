@@ -3,62 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SmokeSlate - About Me</title>
+    <title>SmokeSlate — About Me</title>
     <meta name="description" content="Learn more about SmokeSlate, a developer, gamer, and beta tester." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ['\"Plus Jakarta Sans\"', 'ui-sans-serif', 'system-ui'],
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
-  <body class="min-h-screen bg-slate-50 text-slate-900">
-    <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
-      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
-        <a class="text-2xl font-semibold text-slate-900" href="index.html">SmokeSlate</a>
-        <nav class="flex flex-wrap items-center gap-6 text-sm font-medium text-slate-600" data-nav>
-          <a class="transition hover:text-indigo-500" href="index.html">Home</a>
-          <a class="transition hover:text-indigo-500" href="projects.html">Projects</a>
-          <a class="transition hover:text-indigo-500" href="hosting.html">Hosting</a>
-          <a class="transition hover:text-indigo-500" href="about.html">About Me</a>
-          <a class="transition hover:text-indigo-500" href="github.html">GitHub</a>
-          <a class="transition hover:text-indigo-500" href="discord.html">Discord</a>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-title" href="index.html">SmokeSlate</a>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About Me</a>
         </nav>
       </div>
     </header>
 
-    <main class="mx-auto max-w-4xl px-6 py-16">
-      <header class="space-y-3">
-        <p class="text-sm font-semibold uppercase tracking-widest text-indigo-500">About Me</p>
-        <h1 class="font-display text-4xl font-bold leading-tight sm:text-5xl">Hi, I'm SmokeSlate</h1>
-      </header>
-
-      <section class="mt-10 space-y-6 text-lg text-slate-700">
-        <p>I am a developer, gamer, and beta tester.</p>
-        <p>
-          I like playing VR games, as well as making my own shortcuts and websites. Experimenting with different platforms keeps me
-          sharp and lets me build things that make life a little easier for people around me.
-        </p>
-        <p>
-          When I'm not prototyping a new interface or automating something with Shortcuts, I'm probably tweaking servers and
-          infrastructure so that my projects stay fast and reliable.
-        </p>
-        <p>
-          Want to keep up with what I'm working on? Check out the projects page for the latest releases or drop by the Discord
-          community to say hi.
-        </p>
-      </section>
+    <main>
+      <div class="container hero">
+        <h1>About Me</h1>
+        <div class="content-stack">
+          <p>I am a developer, gamer, and beta tester.</p>
+          <p>I like playing VR games, as well as making my own shortcuts and websites.</p>
+        </div>
+      </div>
     </main>
 
-    <footer class="bg-slate-900 py-10 text-center text-sm text-slate-300">
-      <p>SmokeSlate</p>
-      <p class="mt-2">®2022-2025 All Rights Reserved</p>
+    <footer class="page-footer">
+      SmokeSlate
+      <span>®2022-2025 All Rights Reserved</span>
     </footer>
 
     <script src="assets/js/site.js" defer></script>

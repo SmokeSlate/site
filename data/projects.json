@@ -1,42 +1,61 @@
 [
   {
-    "title": "iMovie Tools",
-    "date": "April 12, 2025",
-    "description": "A tool to export media and full projects from iMovie."
+    "title": "Hosting",
+    "date": "May 20, 2025",
+    "description": "How I host my sites and projects.",
+    "url": "hosting.html",
+    "image": "https://lh3.googleusercontent.com/sitesv/AICyYdbwXZg8Rnsqq3HwCV-1bmIDxDpwDdUIFsOPJw5pQG-38u9v51goerR8W76NsI3TIrPBvYMtE8DsA0TGVLOrXJhaRmashwNec7uwV2Q1izccOjLzfCEFTs-jm9F8nupvoDI1LMLofO2w0eFwWPPmWS6VPILRPCFfuHg2T6CDLYby4L1UVEfLNqgGnmU=w1280",
+    "featured": true
   },
   {
     "title": "ReSite",
     "date": "February 20, 2025",
-    "description": "My latest project, a service for making sites."
+    "description": "My latest project, a service for making sites.",
+    "url": "https://resite.web.app",
+    "image": "https://lh3.googleusercontent.com/sitesv/AICyYdbN97kvd7Vn7g60DIf5X9ltGmU167eQFXqgz__s2IvKP6Efy50CejcGQ01W9H-Zm8Q0-ZXSQ5bjoPeiPC9ZCurSy6-poSBXzOLLS5k_SsliTKHry-zaElB4qRP_ewQriEP_FjpQjgtB7dBSl5vxi2AP-Nkc7M5Xf1BwIPq0GZUnQsDVT_eO1w4TWgke8AB-c1HnlLzMZk2-WXkDL44JUiCcMCiuGrjlIaga=w1280",
+    "featured": true
   },
   {
     "title": "Beat The Bank Online",
     "date": "Jan 7, 2025 - May 21, 2025",
-    "description": "My online shortcut game!"
+    "description": "My online shortcut game!",
+    "url": "https://routinehub.co/shortcut/18289/",
+    "image": "https://lh3.googleusercontent.com/sitesv/AICyYdYpWckJ-9-GyecVTJAVlAxilHpXIbnxzap7o1KSzCl4wJe9miR-lRL6RTWdhn1-7yJIHl8zdOuMwupGxwvQ0hB6ZTQuIf2S0O1-8JOIyYCV3QMXx_bQj315T0OVppDRHFYGac1Svcvj3_mrAiXk9WUgC9Laa0QL3bWWzBOD6SK71DT1xuTGeF5q=w1280",
+    "featured": true
   },
   {
-    "title": "Hosting",
-    "date": "May 20, 2025",
-    "description": "How I host my sites and projects."
+    "title": "iMovie Tools",
+    "date": "April 12, 2025",
+    "description": "A tool to export media and full projects from iMovie.",
+    "url": "https://github.com/SmokeSlate/iMovieTools",
+    "image": "https://lh3.googleusercontent.com/sitesv/AICyYdY0EkfI1CPWXZ-tclmJ5n34yZ2mqwNBX_ENFMNVGPo-PWaDURe1mpxfycmJUlQbWgahRLRK4c3OXXCaV2JbZctSPCCFPKvQFtGPTMKytX8dQ0dC-HT8jldVVG3C-5-iZxKfJqdsj8Z-88yOGNdGt7DxwmYSZi9fY8oD9_wrHLlnF-MREW8s3qXhU3Y=w1280"
   },
   {
     "title": "RoutineHub",
     "date": "May 21, 2025",
-    "description": "My RoutineHub profile with all my latest shortcuts."
+    "description": "My RoutineHub profile with all my latest shortcuts.",
+    "url": "https://routinehub.co/user/SmokeSlate",
+    "image": "https://lh3.googleusercontent.com/sitesv/AICyYdapOTOJfKXcOlHxWCbu5umMr7nJpn5JmzdHhFKxLADQ2gJbzLpV4d72yv-k5BMykwBRQtcMQjL_dn3vqEYoYQFe0BSG3ywrrzsP3lXmGM_6a-oAzjzQNNPA1mNzoRN5S3rcOA6VoWTf_UDp2-VE6KLPCC3_3ccT0ND9HL0Xfn9CM1OSt8AOaviv5Y2QnZo9_u5gzabLaly7Vb2vQvFOW-hoHy5Kl9ZAoOmyqg=w1280"
   },
   {
     "title": "Calculator Games",
     "date": "May 21, 2025",
-    "description": "My TI-84 game collection."
+    "description": "My TI-84 game collection.",
+    "url": "https://calgames.web.app",
+    "image": "https://lh3.googleusercontent.com/sitesv/AICyYdas8JAnQhUEAQ7XuUplA-LtapmIRwe8aBhCzSyvyFYFF74vYPsIZR90ZdUfRCghvyVYe3h0WYzPPlyzkG-tt_jNmrU9HbghcNN6Z1QrldpmljIPDV6g2GckftqZb1CL39HpOTmA-TvZJNxmjK_PZf3UqkdTjUkkOZGAtXkGxKChIjtMcgYmt8Nbphe-8tHBotb6R9m-b1klciCWyQZuCzECwzsCwHKRNYZ-zoENwDFEamGXpVsUVZIoMVlGcc=w1280"
   },
   {
     "title": "Icon Maker",
     "date": "February 15, 2024",
-    "description": "Make icons for your iOS home screen."
+    "description": "Make icons for your iOS home screen.",
+    "url": "https://routinehub.co/shortcut/12219",
+    "image": "https://lh3.googleusercontent.com/sitesv/AICyYdauPP36Qa0T3uAUoGPBZdHj1xuUpRYoXSOgquNs10QAQfFlvDmwLOehlrCZxhyv6qWDphuNE8iE_huMGd7-sEEyzDhZPa3px5gvi44EVWAmmU7BQgOZAf2EWwBRuE784xz1hj_O5HOM60O_jotKMB49mWJD2J76lSuggLq-4jQQVnauqpMsCXQyzKI-yycOKUF7X411sNYZ-zoENwDFEamGXpVsUVZIoMVlGcc=w1280"
   },
   {
     "title": "Wordle Trainer",
     "date": "May 21, 2025",
-    "description": "My custom Wordle with a built-in hint."
+    "description": "My custom Wordle with a built-in hint.",
+    "url": "https://wordle.smokeslate.xyz",
+    "image": "https://lh3.googleusercontent.com/sitesv/AICyYdaa7lyUVk_BYo3s0ieAs2-mX752_sW_oazcPOWKyRHnx2ieu7ru_HpEiNdYR6HVJusZd41wrZCS-pgy31NRqXlSP8_QcVwbDPxFW3e7ws9_LG-QH4eulXw6tI76DpyeClTUtjD7HsKao99BqZqYffBfvYGe7LUG6mJ1ZkS7kUA9Z_zhVJKjC-S6=w1280"
   }
 ]

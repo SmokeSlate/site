@@ -1,83 +1,106 @@
-async function loadProjects() {
-  const container = document.querySelector('[data-projects]');
-  if (!container) return;
+async function fetchProjectsData() {
+  const response = await fetch('data/projects.json');
+  if (!response.ok) {
+    throw new Error(`Failed to load projects: ${response.status}`);
+  }
+  const payload = await response.json();
+  return Array.isArray(payload) ? payload : [];
+}
 
-  const limit = Number(container.getAttribute('data-projects-limit')) || null;
+function createProjectCard(project) {
+  const hasLink = Boolean(project.url);
+  const card = document.createElement(hasLink ? 'a' : 'div');
+  card.className = 'project-card';
 
-  try {
-    const response = await fetch('data/projects.json');
-    if (!response.ok) {
-      throw new Error(`Failed to load projects: ${response.status}`);
+  if (hasLink) {
+    card.href = project.url;
+    const isExternal = /^https?:\/\//i.test(project.url) && !project.url.startsWith(location.origin);
+    if (isExternal) {
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
     }
-    const projects = await response.json();
-    const items = Array.isArray(projects) ? projects : [];
-    const selected = limit ? items.slice(0, limit) : items;
+  }
 
-    if (!selected.length) {
-      container.innerHTML = '<p class="text-gray-500">Projects will appear here soon.</p>';
+  if (project.image) {
+    const img = document.createElement('img');
+    img.src = project.image;
+    img.alt = project.title ? `${project.title} preview` : 'Project preview';
+    card.appendChild(img);
+  }
+
+  if (project.date) {
+    const date = document.createElement('span');
+    date.className = 'project-date';
+    date.textContent = project.date;
+    card.appendChild(date);
+  }
+
+  const title = document.createElement('span');
+  title.className = 'project-title';
+  title.textContent = project.title || 'Untitled project';
+  card.appendChild(title);
+
+  if (project.description) {
+    const description = document.createElement('span');
+    description.className = 'project-desc';
+    description.textContent = project.description;
+    card.appendChild(description);
+  }
+
+  return card;
+}
+
+async function hydrateProjects(container) {
+  try {
+    const featuredOnly = container.hasAttribute('data-projects-featured');
+    const limitAttr = container.getAttribute('data-projects-limit');
+    const limit = limitAttr ? Number.parseInt(limitAttr, 10) : undefined;
+
+    const data = await fetchProjectsData();
+    let projects = data.slice();
+
+    if (featuredOnly) {
+      projects = projects.filter((item) => item.featured);
+    }
+
+    if (typeof limit === 'number' && Number.isFinite(limit)) {
+      projects = projects.slice(0, limit);
+    }
+
+    if (!projects.length) {
+      container.innerHTML = '<p class="empty-state">Projects will appear here soon.</p>';
       return;
     }
 
     const fragment = document.createDocumentFragment();
-    selected.forEach((project) => {
-      const card = document.createElement('article');
-      card.className = 'flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg';
-
-      const time = document.createElement('p');
-      time.className = 'text-sm font-medium uppercase tracking-wide text-indigo-500';
-      time.textContent = project.date || '';
-      card.appendChild(time);
-
-      const title = document.createElement('h3');
-      title.className = 'text-2xl font-semibold text-slate-900';
-      title.textContent = project.title || 'Untitled project';
-      card.appendChild(title);
-
-      const description = document.createElement('p');
-      description.className = 'text-base text-slate-600';
-      description.textContent = project.description || '';
-      card.appendChild(description);
-
-      if (project.url) {
-        const link = document.createElement('a');
-        link.href = project.url;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.className = 'inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-500';
-        link.innerHTML = 'Learn more <span aria-hidden="true">→</span>';
-        card.appendChild(link);
-      }
-
-      fragment.appendChild(card);
+    projects.forEach((project) => {
+      fragment.appendChild(createProjectCard(project));
     });
 
     container.innerHTML = '';
     container.appendChild(fragment);
   } catch (error) {
     console.error(error);
-    container.innerHTML = '<p class="text-red-600">Unable to load projects right now. Please try again later.</p>';
+    container.innerHTML = '<p class="empty-state">Unable to load projects right now.</p>';
   }
 }
 
-function highlightActiveLink() {
-  const { pathname } = window.location;
-  const normalized = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
-  const links = document.querySelectorAll('[data-nav] a');
-  links.forEach((link) => {
-    const href = link.getAttribute('href');
-    if (!href) return;
-    const current = href === 'index.html' ? '' : href.replace('./', '');
-    const matchesCurrent = current
-      ? normalized === `/${current}` || normalized.endsWith(`/${current}`)
-      : normalized === '' || normalized === '/' || normalized === '/index.html';
+function setActiveNav() {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const normalized = currentPath === '' ? 'index.html' : currentPath;
 
-    if (matchesCurrent) {
-      link.classList.add('text-indigo-500');
+  document.querySelectorAll('[data-nav] a').forEach((link) => {
+    const href = link.getAttribute('href');
+    const isMatch = href === normalized || (href === 'index.html' && normalized === '');
+    if (isMatch) {
+      link.classList.add('is-active');
     }
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  highlightActiveLink();
-  loadProjects();
+  setActiveNav();
+  document.querySelectorAll('[data-projects]').forEach((container) => {
+    hydrateProjects(container);
+  });
 });
