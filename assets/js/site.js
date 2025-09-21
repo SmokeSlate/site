@@ -12,7 +12,7 @@ function createProjectCard(project) {
   const hasLink = Boolean(project.url);
   const card = document.createElement(hasLink ? 'a' : 'div');
   card.className =
-    'flex h-full flex-col gap-3 rounded-lg border border-gray-200 bg-white p-4 text-left shadow-sm transition hover:border-blue-500 hover:shadow';
+    'flex h-full flex-col gap-3 rounded-xl border border-gray-800 bg-gray-900 p-5 text-left shadow-lg shadow-black/20 transition hover:border-gray-600 hover:shadow-black/40';
 
   if (hasLink) {
     card.href = project.url;
@@ -34,19 +34,19 @@ function createProjectCard(project) {
 
   if (project.date) {
     const date = document.createElement('p');
-    date.className = 'text-xs font-semibold uppercase tracking-wide text-blue-600';
+    date.className = 'text-xs font-semibold uppercase tracking-wide text-emerald-400';
     date.textContent = project.date;
     card.appendChild(date);
   }
 
   const title = document.createElement('h3');
-  title.className = 'text-lg font-semibold text-gray-900';
+  title.className = 'text-lg font-semibold text-white';
   title.textContent = project.title || 'Untitled project';
   card.appendChild(title);
 
   if (project.description) {
     const description = document.createElement('p');
-    description.className = 'text-sm leading-6 text-gray-600';
+    description.className = 'text-sm leading-6 text-gray-400';
     description.textContent = project.description;
     card.appendChild(description);
   }
@@ -86,7 +86,7 @@ async function hydrateProjects(container) {
   } catch (error) {
     console.error(error);
     container.innerHTML =
-      '<p class="col-span-full text-center text-sm text-red-600">Unable to load projects right now.</p>';
+      '<p class="col-span-full text-center text-sm text-red-400">Unable to load projects right now.</p>';
   }
 }
 
@@ -98,8 +98,8 @@ function setActiveNav() {
     const href = link.getAttribute('href');
     const isMatch = href === normalized || (href === 'index.html' && normalized === '');
     if (isMatch) {
-      link.classList.add('text-blue-600', 'font-semibold');
-      link.classList.remove('text-gray-600');
+      link.classList.add('text-white', 'font-semibold');
+      link.classList.remove('text-gray-400');
       link.setAttribute('aria-current', 'page');
     }
   });
